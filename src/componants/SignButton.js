@@ -1,12 +1,21 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Colors from '../styles/Colors';
+import {useNavigation} from '@react-navigation/native';
 
 const SignButton = () => {
+  const navigation = useNavigation();
+
   return (
     <View>
       <TouchableOpacity style={styles.ButtonContainer}>
-        <Text style={styles.Button}>Sign in</Text>
+        <Text
+          style={styles.Button}
+          onPress={() => {
+            navigation.navigate('RoleSelectionScreen');
+          }}>
+          Sign in
+        </Text>
       </TouchableOpacity>
     </View>
   );

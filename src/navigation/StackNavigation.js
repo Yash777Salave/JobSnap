@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import SplashScreen from '../screens/SplashScreen';
 import SignIn from '../screens/SignIn';
+import RoleSelectionScreen from '../screens/RoleSelectionScreen';
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -15,7 +16,16 @@ const StackNavigation = () => {
           component={SplashScreen}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="SignIn" component={SignIn} options={{headerShown:false}} />
+        <Stack.Screen
+          name="SignIn"
+          component={SignIn}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="RoleSelectionScreen"
+          component={RoleSelectionScreen}
+          options={{headerShown:false}}
+        />
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>

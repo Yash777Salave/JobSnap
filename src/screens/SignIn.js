@@ -6,14 +6,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import LogoContainer from '../componants/LogoContainer';
 import Colors from '../styles/Colors';
 import SignButton from '../componants/SignButton';
 import {Checkbox} from 'react-native-paper';
+import {useNavigation} from '@react-navigation/native';
 
 const SignIn = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
 
   return (
     <View style={styles.MainContainer}>
@@ -88,7 +89,7 @@ export default SignIn;
 const styles = StyleSheet.create({
   MainContainer: {
     flex: 1,
-    backgroundColor:'#ffff'
+    backgroundColor: '#ffff',
   },
   SignInTXT: {
     fontSize: 20,
