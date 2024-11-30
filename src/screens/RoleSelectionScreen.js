@@ -20,7 +20,6 @@ const RoleSelectionScreen = () => {
           />
           <Text style={styles.WhatLookingTXT}>What are you looking for?</Text>
         </View>
-        {/* //-------------- */}
 
         <View style={styles.OptionMainContainer}>
           <TouchableOpacity
@@ -40,7 +39,6 @@ const RoleSelectionScreen = () => {
 
             <Text style={styles.ChooseBoxTXT}>I want a job</Text>
           </TouchableOpacity>
-
           <TouchableOpacity
             style={[
               styles.ChoosingContainer,
@@ -58,8 +56,6 @@ const RoleSelectionScreen = () => {
             <Text style={styles.ChooseBoxTXT}>I want an Employee</Text>
           </TouchableOpacity>
         </View>
-        {/* //-------------- */}
-
         <TouchableOpacity style={styles.ButtonContainer}>
           <Text
             style={styles.Button}

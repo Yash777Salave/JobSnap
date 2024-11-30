@@ -30,12 +30,12 @@ const HeadingComponant = ({headingTXT, icon}) => {
 export default HeadingComponant;
 
 const styles = StyleSheet.create({
-//   MainConatiner: {
-//     flex: 1,
-//   },
+  //   MainConatiner: {
+  //     flex: 1,
+  //   },
   LeftIcon: {
-    height: 35,
-    width: 35,
+    height: 29,
+    width: 29,
     backgroundColor: Colors.lightBlue,
     // alignItems:'center',
     // alignContent:'center',
