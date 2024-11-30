@@ -1,17 +1,12 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import React from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React, {useState} from 'react';
 import LogoContainer from '../componants/LogoContainer';
-import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import Colors from '../styles/Colors';
+import {useNavigation} from '@react-navigation/native';
 
 const RoleSelectionScreen = () => {
+  const [isSelect, setIsSelect] = useState(null);
+  const navigation = useNavigation();
   return (
     <View style={styles.MainContainer}>
       <View style={styles.AppLogoContainer}>
@@ -25,8 +20,17 @@ const RoleSelectionScreen = () => {
           />
           <Text style={styles.WhatLookingTXT}>What are you looking for?</Text>
         </View>
+        {/* //-------------- */}
+
         <View style={styles.OptionMainContainer}>
-          <TouchableOpacity style={styles.ChoosingContainer}>
+          <TouchableOpacity
+            style={[
+              styles.ChoosingContainer,
+              isSelect === 1 && styles.selectedContainer,
+            ]}
+            onPress={() => {
+              setIsSelect(1);
+            }}>
             <View style={styles.LogoContainer}>
               <Image
                 source={require('../assets/ChooseRole/reading-book.png')}
@@ -37,7 +41,14 @@ const RoleSelectionScreen = () => {
             <Text style={styles.ChooseBoxTXT}>I want a job</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.ChoosingContainer}>
+          <TouchableOpacity
+            style={[
+              styles.ChoosingContainer,
+              isSelect === 2 && styles.selectedContainer,
+            ]}
+            onPress={() => {
+              setIsSelect(2);
+            }}>
             <View style={styles.LogoContainer}>
               <Image
                 source={require('../assets/ChooseRole/user-profile.png')}
@@ -47,6 +58,17 @@ const RoleSelectionScreen = () => {
             <Text style={styles.ChooseBoxTXT}>I want an Employee</Text>
           </TouchableOpacity>
         </View>
+        {/* //-------------- */}
+
+        <TouchableOpacity style={styles.ButtonContainer}>
+          <Text
+            style={styles.Button}
+            onPress={() => {
+              isSelect === 1 && navigation.navigate('JobCategories');
+            }}>
+            Next
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -93,14 +115,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
     margin: 15,
-    marginTop: 35,
+    marginTop: 25,
   },
   ReadingBookLogo: {
     height: 45,
     width: 45,
   },
   LogoContainer: {
-    backgroundColor: '#E0FFFF',
+    backgroundColor: '#BDDDFC',
     borderRadius: 100,
     height: 70,
     width: 70,
@@ -120,4 +142,30 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   AppLogoContainer: {marginTop: 30},
+  selectedContainer: {
+    borderColor: Colors.Primary_Color,
+    borderWidth: 4,
+  },
+  ButtonContainer: {
+    margin: 10,
+    top: -20,
+    alignItems: 'flex-end',
+    // alignContent: 'center',
+    // justifyContent: 'center',
+  },
+  Button: {
+    // borderWidth: 2,
+    backgroundColor: Colors.Primary_Color,
+    // backgroundColor:'#0094DA',
+    padding: 9,
+    borderRadius: 10,
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#ffff',
+    width: 90,
+    height: 45,
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+  },
 });

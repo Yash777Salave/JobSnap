@@ -6,6 +6,8 @@ import Home from '../screens/Home';
 import SplashScreen from '../screens/SplashScreen';
 import SignIn from '../screens/SignIn';
 import RoleSelectionScreen from '../screens/RoleSelectionScreen';
+import JobCategories from '../screens/JobCategories';
+import HeadingComponant from '../componants/HeadingComponant';
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -24,9 +26,19 @@ const StackNavigation = () => {
         <Stack.Screen
           name="RoleSelectionScreen"
           component={RoleSelectionScreen}
-          options={{headerShown:false}}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="JobCategories"
+          component={JobCategories}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="HeadingComponant"
+          component={HeadingComponant}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
