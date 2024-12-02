@@ -9,6 +9,7 @@ import RoleSelectionScreen from '../screens/RoleSelectionScreen';
 import JobCategories from '../screens/JobCategories';
 import HeadingComponant from '../componants/HeadingComponant';
 import Button from '../componants/Button';
+import BotttomNavigation from './BotttomNavigation';
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -29,7 +30,6 @@ const StackNavigation = () => {
           component={RoleSelectionScreen}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen
           name="JobCategories"
           component={JobCategories}
@@ -41,6 +41,12 @@ const StackNavigation = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Button" component={Button} />
+        <Stack.Screen
+          name="Bottom"
+          component={BotttomNavigation}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
