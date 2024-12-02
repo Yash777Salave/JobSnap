@@ -61,6 +61,7 @@ const RoleSelectionScreen = () => {
             style={styles.Button}
             onPress={() => {
               isSelect === 1 && navigation.navigate('JobCategories');
+              //isSelect === 1 && navigation.navigate('Button');
             }}>
             Next
           </Text>

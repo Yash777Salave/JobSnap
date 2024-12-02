@@ -99,6 +99,7 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import HeadingComponant from '../componants/HeadingComponant';
 import ChooseBox from '../componants/ChooseBox';
+import Button from '../componants/Button';
 
 const JobCategories = () => {
   const jobCategories = [
@@ -145,7 +146,9 @@ const JobCategories = () => {
   ];
 
   return (
-    <ScrollView style={styles.MainContainer} showsVerticalScrollIndicator = {false}>
+    <ScrollView
+      style={styles.MainContainer}
+      showsVerticalScrollIndicator={false}>
       <HeadingComponant
         headingTXT={'What job you want?'}
         icon={require('../assets/left.png')}
@@ -164,6 +167,7 @@ const JobCategories = () => {
           </View>
         ))}
       </View>
+      <Button type={'Next'} />
     </ScrollView>
   );
 };

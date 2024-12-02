@@ -8,6 +8,7 @@ import SignIn from '../screens/SignIn';
 import RoleSelectionScreen from '../screens/RoleSelectionScreen';
 import JobCategories from '../screens/JobCategories';
 import HeadingComponant from '../componants/HeadingComponant';
+import Button from '../componants/Button';
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -39,6 +40,7 @@ const StackNavigation = () => {
           component={HeadingComponant}
           options={{headerShown: false}}
         />
+        <Stack.Screen name="Button" component={Button} />
       </Stack.Navigator>
     </NavigationContainer>
   );
