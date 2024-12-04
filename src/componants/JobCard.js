@@ -3,16 +3,18 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableHighlight,
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import React, {useState} from 'react';
 import Colors from '../styles/Colors';
+import SavedJobs from '../screens/SavedJobs';
 
 const JobCard = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [isId, setIsId] = useState();
+
   const JobInformation = [
     {
       id: '1',
@@ -40,17 +42,17 @@ const JobCard = () => {
       title: 'Wordpress Developer',
       location: 'Bhuwneshwar',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'Harness Digitech.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
-        'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
+        'We are looking for a great Wordpress developer who is proficient with Wordpress. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'Wordpress & TypeScript/JavaScript,Redux',
       employmenrType: 'Full Time',
       experienceDetails: '2-5 years',
       salary: '100k-200k',
@@ -61,19 +63,19 @@ const JobCard = () => {
       title: 'Laravel Developer',
       location: 'Mumbai',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'MadeEasy Softwares.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
-        'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
+        'We are looking for a great Laravel developer who is proficient with Laravel. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'Laravel , knowledge of DSA is plus',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '0-5 years',
       salary: '100k-200k',
       postedOn: '23 Nov',
     },
@@ -82,12 +84,12 @@ const JobCard = () => {
       title: 'React Developer',
       location: 'Mumbai',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'ClickKart Pvt Ltd.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
         'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
@@ -103,17 +105,17 @@ const JobCard = () => {
       title: 'Angular Developer',
       location: 'Mumbai',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'Elexi Software solutions',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
-        'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
+        'We are looking for a great Angular developer who is proficient with Angular. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'Angular & TypeScript/JavaScript,Redux',
       employmenrType: 'Full Time',
       experienceDetails: '2-5 years',
       salary: '100k-200k',
@@ -121,22 +123,22 @@ const JobCard = () => {
     },
     {
       id: '6',
-      title: 'Content Writer',
+      title: 'JavaScript Developer',
       location: 'Luckhnow',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'Purnima Pvt Ltd.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
         'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'JavaScript,problem solving skills, knowledge of DSA',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '5-10 years',
       salary: '100k-200k',
       postedOn: '13 April',
     },
@@ -144,20 +146,20 @@ const JobCard = () => {
       id: '7',
       title: 'Java Developer',
       location: 'Mumbai',
-      vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      vancancy: '1',
+      companyName: 'Apex Techno.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
-        'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
+        'We are looking for a great Java developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'React , Java & TypeScript/JavaScript,Redux,Hooks,Navigations',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '5-7 years',
       salary: '100k-200k',
       postedOn: '14 Feb',
     },
@@ -165,20 +167,20 @@ const JobCard = () => {
       id: '8',
       title: 'Full Stack Developer',
       location: 'Jaipur',
-      vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      vancancy: '1',
+      companyName: 'Netparam Pvt Ltd.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
         'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
       KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '0-1 years',
       salary: '100k-200k',
       postedOn: '12 March',
     },
@@ -187,19 +189,19 @@ const JobCard = () => {
       title: '.Net Developer',
       location: 'Banglore',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'Gurukul Softwares.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
-        'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
+        'We are looking for a great Angular developer who is proficient with .Net . Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: '.Net & TypeScript,Angular,Redux',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '4-5 years',
       salary: '100k-200k',
       postedOn: '11 Jully',
     },
@@ -208,19 +210,19 @@ const JobCard = () => {
       title: 'React Developer',
       location: 'Pune',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'Kongo Techno Pvt Ltd.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
         'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'React & TypeScript/JavaScript,Redux,Hooks',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '5+ years',
       salary: '100k-200k',
       postedOn: '13 May',
     },
@@ -229,23 +231,41 @@ const JobCard = () => {
       title: 'PHP Developer',
       location: 'Pune',
       vancancy: '2',
-      companyName: 'Vistara Pvt Ltd.',
+      companyName: 'Sudoku Pvt Ltd.',
       companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
       jobDescription:
-        'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
+        'We are looking for a great PHP developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
       elligibiltyCriteria: {
-        title: 'Bachelor of Technology/Engine',
+        title: 'Bachelor of Technology/Engineering',
         nationality: 'Indian',
       },
       industryType: 'IT-Software Services',
       functionalArea: 'IT-Softwre',
-      KeySkills: 'React Native & TypeScript/JavaScript,Redux,Hooks,Navigations',
+      KeySkills: 'PHP ',
       employmenrType: 'Full Time',
-      experienceDetails: '2-5 years',
+      experienceDetails: '3 years',
       salary: '100k-200k',
       postedOn: '18 June',
     },
   ];
+
+  const [savedCards, setSavedCards] = useState([]);
+
+  const toggleSave = id => {
+    setSavedCards(prev => ({
+      ...prev,
+      [id]: !prev[id], // Toggle the saved state for the selected card
+    }));
+  };
+  // const toggleSave = id => {
+  //   setSavedCards(prev => {
+  //     if (prev.includes(id)) {
+  //       return prev.filter(cardId => cardId !== id); // Remove from saved list
+  //     }
+  //     return [...prev, id]; // Add to saved list
+  //   });
+  // };
+
   return (
     <ScrollView>
       <View style={styles.CardMainContainer}>
@@ -277,26 +297,21 @@ const JobCard = () => {
                 <Text style={styles.PostedOnTXT}>
                   Posted on {item.postedOn}
                 </Text>
-                <TouchableWithoutFeedback
-                  onPress={() => {
-                    setIsClicked(!isClicked);
-                  }}>
-                  {isClicked ? (
-                    <Image
-                      source={require('../assets/CardIcons/star.png')}
-                      style={[styles.StarIcon]}
-                    />
-                  ) : (
-                    <Image
-                      source={require('../assets/CardIcons/starFilled.png')}
-                      style={[styles.StarIcon]}
-                    />
-                  )}
+                <TouchableWithoutFeedback onPress={() => toggleSave(item.id)}>
+                  <Image
+                    source={
+                      savedCards[item.id]
+                        ? require('../assets/CardIcons/starFilled.png')
+                        : require('../assets/CardIcons/star.png')
+                    }
+                    style={styles.StarIcon}
+                  />
                 </TouchableWithoutFeedback>
               </View>
             </View>
           </View>
         ))}
+        {/* <SavedJobs savedJobs={savedCards || []} allJobs={JobInformation} /> */}
       </View>
     </ScrollView>
   );

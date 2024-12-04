@@ -10,6 +10,7 @@ import JobCategories from '../screens/JobCategories';
 import HeadingComponant from '../componants/HeadingComponant';
 import Button from '../componants/Button';
 import BotttomNavigation from './BotttomNavigation';
+import SavedJobs from '../screens/SavedJobs';
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -46,7 +47,12 @@ const StackNavigation = () => {
           component={BotttomNavigation}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen name="SavedJobs" component={SavedJobs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
