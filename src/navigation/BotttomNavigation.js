@@ -11,12 +11,14 @@ const BotttomNavigation = () => {
   const Bottom = createBottomTabNavigator();
   return (
     <Bottom.Navigator
-      //   initialRouteName="Home"
-      screenOptions={{headerShown: false}}>
-      {/* <Bottom.Screen name="Home" component={Home} /> */}
-      <Bottom.Screen name="JobCard" component={JobCard} />
-      <Bottom.Screen name="Profile" component={Profile} />
+      initialRouteName="Home"
+      screenOptions={{headerShown: false,
+      }}
+    >
+      <Bottom.Screen name="Home" component={Home} />
+      {/* <Bottom.Screen name="JobCard" component={JobCard} /> */}
       <Bottom.Screen name="AllJobs" component={AllJobs} />
+      <Bottom.Screen name="Profile" component={Profile} />
     </Bottom.Navigator>
   );
 };

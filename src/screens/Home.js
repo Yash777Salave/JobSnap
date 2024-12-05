@@ -1,68 +1,84 @@
-import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import React from 'react';
 import Colors from '../styles/Colors';
 import HeadingComponant from '../componants/HeadingComponant';
-
+import JobCard from '../componants/JobCard';
+import {JobInformation} from '../componants/ProgrammingJobs';
 const Home = () => {
   return (
-    <View style={styles.MainContainer}>
-      <View style={styles.SearchBarAndProfileContainer}>
-        <View style={styles.SearchBarContainer}>
-          <Image
-            source={require('../assets/Search.png')}
-            style={styles.SearchIcon}
-          />
-          <TextInput
-            placeholder="Enter Skills,Designation"
-            style={styles.SearchBar}
-          />
-        </View>
-        <View style={styles.ProfileContainer}>
-          <Image
-            source={require('../assets/CompanyLogo/CompanyLogo1.webp')}
-            style={styles.ProfileLogo}
-          />
-        </View>
-      </View>
-      <View style={styles.QuickLinkHeadingComponant}>
-        <Text style={styles.QuickLinkHeadingTXT}>Quick links for you</Text>
-      </View>
-      <View style={styles.LinksCardsContainer}>
-        <View style={styles.EmployerCardContainer}>
-          <View style={styles.IconsContainer}>
+    <ScrollView
+      style={styles.MainContainer}
+      showsVerticalScrollIndicator={false}>
+      <View style={{margin: 10}}>
+        <View style={styles.SearchBarAndProfileContainer}>
+          <View style={styles.SearchBarContainer}>
             <Image
-              source={require('../assets/comment.png')}
-              style={styles.Icons}
+              source={require('../assets/Search.png')}
+              style={styles.SearchIcon}
+            />
+            <TextInput
+              placeholder="Enter Skills,Designation"
+              style={styles.SearchBar}
             />
           </View>
-
-          <Text style={styles.IconTXT}>Employer</Text>
-          <Text style={styles.IconChildTXT}>invites</Text>
-        </View>
-
-        <View style={styles.EmployerCardContainer}>
-          <View style={styles.IconsContainer}>
+          <View style={styles.ProfileContainer}>
             <Image
-              source={require('../assets/send.png')}
-              style={styles.Icons}
+              source={require('../assets/CompanyLogo/CompanyLogo1.webp')}
+              style={styles.ProfileLogo}
             />
           </View>
-          <Text style={styles.IconTXT}>Apply</Text>
-          <Text style={styles.IconChildTXT}>status</Text>
         </View>
+        <View style={styles.QuickLinkHeadingComponant}>
+          <Text style={styles.QuickLinkHeadingTXT}>Quick links for you</Text>
+        </View>
+        <View style={styles.LinksCardsContainer}>
+          <View style={styles.EmployerCardContainer}>
+            <View style={styles.IconsContainer}>
+              <Image
+                source={require('../assets/comment.png')}
+                style={styles.Icons}
+              />
+            </View>
 
-        <View style={styles.EmployerCardContainer}>
-          <View style={styles.IconsContainer}>
-            <Image
-              source={require('../assets/bookmark.png')}
-              style={styles.Icons}
-            />
+            <Text style={styles.IconTXT}>Employer</Text>
+            <Text style={styles.IconChildTXT}>invites</Text>
           </View>
-          <Text style={styles.IconTXT}>Saved</Text>
-          <Text style={styles.IconChildTXT}>jobs</Text>
+
+          <View style={styles.EmployerCardContainer}>
+            <View style={styles.IconsContainer}>
+              <Image
+                source={require('../assets/send.png')}
+                style={styles.Icons}
+              />
+            </View>
+            <Text style={styles.IconTXT}>Apply</Text>
+            <Text style={styles.IconChildTXT}>status</Text>
+          </View>
+
+          <View style={styles.EmployerCardContainer}>
+            <View style={styles.IconsContainer}>
+              <Image
+                source={require('../assets/bookmark.png')}
+                style={styles.Icons}
+              />
+            </View>
+            <Text style={styles.IconTXT}>Saved</Text>
+            <Text style={styles.IconChildTXT}>jobs</Text>
+          </View>
         </View>
+        <View style={styles.QuickLinkHeadingComponant}>
+          <Text style={styles.QuickLinkHeadingTXT}>Jobs based on</Text>
+        </View>
+        <JobCard JobInformation={JobInformation} />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -72,7 +88,8 @@ const styles = StyleSheet.create({
   MainContainer: {
     flex: 1,
     // alignItems: 'center',
-    margin: 10,
+    // margin: 10,
+    backgroundColor: '#ffff',
   },
   SearchBarAndProfileContainer: {
     flexDirection: 'row',
@@ -117,7 +134,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   LinksCardsContainer: {
-    borderWidth: 1,
+    // borderWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -129,10 +146,22 @@ const styles = StyleSheet.create({
   EmployerCardContainer: {
     height: 120,
     width: '29%',
-    borderWidth: 2,
+    // borderWidth: 2,
     margin: 10,
     alignItems: 'center',
+    backgroundColor: '#ffff',
+
+    borderRadius: 10,
+    borderRadius: 12,
+
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: -10},
+    shadowOpacity: 0.3,
+    shadowRadius: 15,
+
+    elevation: 7,
   },
+
   Icons: {
     height: 22,
     width: 22,
@@ -146,14 +175,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 30,
     backgroundColor: Colors.lightBlue,
+    marginTop: 10,
   },
   IconTXT: {
     fontSize: 15,
     textAlign: 'center',
     marginTop: 10,
+    color: Colors.Grey,
   },
   IconChildTXT: {
     fontSize: 15,
     textAlign: 'center',
+    color: Colors.Grey,
   },
 });
