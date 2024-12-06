@@ -1,4 +1,12 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import HeadingComponant from './HeadingComponant';
 import Colors from '../styles/Colors';
@@ -24,10 +32,10 @@ const JobDetailPage = ({route}) => {
     vancancy,
   } = route.params;
   return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor: '#ffff'}}>
       <View style={styles.MainContainer}>
-        <HeadingComponant icon={require('../assets/left.png')} />
         <View style={styles.HeadingContainer}>
+          <HeadingComponant icon={require('../assets/left.png')} />
           <View style={styles.HeadingAndLogoContainer}>
             <View style={{width: '60%'}}>
               <Text style={styles.titleTxt}>{title}</Text>
@@ -40,9 +48,16 @@ const JobDetailPage = ({route}) => {
             <Text style={styles.companyName}>{companyName}</Text>
             <Text style={styles.vacancy}>{vancancy} Vacancy</Text>
           </View>
-          <View>
-            <Button type={'Apply'} />
-            
+          <View style={styles.ButtonAndIconContainer}>
+            <TouchableOpacity style={styles.applyBTNContainer}>
+              <Text style={styles.ApplyBtnTXT}>Apply</Text>
+            </TouchableOpacity>
+            <TouchableHighlight style={styles.shareIconContainer}>
+              <Image
+                source={require('../assets/share.png')}
+                style={styles.shareIcon}
+              />
+            </TouchableHighlight>
           </View>
         </View>
       </View>
@@ -57,10 +72,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     // alignItems: 'center',
-    margin: 10,
+    // margin: 10,
   },
   HeadingContainer: {
-    borderWidth: 1,
+    // borderWidth: 1,
+    borderBottomLeftRadius: 40,
+    padding: 10,
+    backgroundColor: '#ffff',
+    shadowColor: '#000',
+    elevation: 9,
   },
   HeadingAndLogoContainer: {
     flexDirection: 'row',
@@ -69,6 +89,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     // flexWrap: 'wrap',
     alignItems: 'center',
+    marginTop: 10,
   },
   companyLogo: {
     height: 70,
@@ -84,5 +105,37 @@ const styles = StyleSheet.create({
   },
   vacancy: {
     color: Colors.Grey,
+  },
+  shareIcon: {
+    height: 20,
+    width: 20,
+  },
+  shareIconContainer: {
+    backgroundColor: Colors.lightBlue,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 30,
+    padding: 15,
+    marginRight: 20,
+  },
+  ButtonAndIconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 17,
+  },
+  applyBTNContainer: {
+    width: '50%',
+    // height:40,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+    backgroundColor: Colors.Primary_Color,
+    borderRadius: 35,
+  },
+  ApplyBtnTXT: {
+    textAlign: 'center',
+    fontSize: 17,
+    color: '#ffff',
   },
 });
