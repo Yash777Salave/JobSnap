@@ -7,11 +7,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import HeadingComponant from './HeadingComponant';
 import Colors from '../styles/Colors';
+import Button from './Button';
 
 const JobDetailPage = ({route}) => {
+  const [showMore, setShowMore] = useState(false);
   const {
     id,
     title,
@@ -149,8 +151,25 @@ const JobDetailPage = ({route}) => {
           <Text style={[styles.HeadingTXT, {marginVertical: 10}]}>
             Employer Details
           </Text>
-          <Text style={styles.DescriptionTexts}>{employerDetails}</Text>
+          {showMore ? (
+            <Text style={styles.DescriptionTexts}>{employerDetails}</Text>
+          ) : (
+            <Text style={styles.DescriptionTexts}>{`${employerDetails.slice(
+              0,
+              71,
+            )}`}</Text>
+          )}
+          <TouchableOpacity
+            onPress={() => {
+              setShowMore(!showMore);
+            }}
+            style={styles.ShowMoreContainer}>
+            <Text style={styles.showMoreTXT}>
+              {showMore ? 'Show Less' : '...Show More'}
+            </Text>
+          </TouchableOpacity>
         </View>
+        <Button type={'Apply'} />
       </View>
     </ScrollView>
   );
@@ -302,5 +321,13 @@ const styles = StyleSheet.create({
 
     elevation: 7,
     backgroundColor: '#ffff',
+  },
+  showMoreTXT: {
+    fontSize: 17,
+    color: Colors.Primary_Color,
+    fontWeight: 'bold',
+  },
+  ShowMoreContainer: {
+    width: '35%',
   },
 });
