@@ -1,6 +1,8 @@
 export const JobInformation = [
   {
     id: '1',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'React Native Developer',
     location: 'Mumbai',
     vancancy: '2',
@@ -11,6 +13,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engine',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -22,6 +25,8 @@ export const JobInformation = [
   },
   {
     id: '2',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'Wordpress Developer',
     location: 'Bhuwneshwar',
     vancancy: '2',
@@ -32,6 +37,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -43,6 +49,8 @@ export const JobInformation = [
   },
   {
     id: '3',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'Laravel Developer',
     location: 'Mumbai',
     vancancy: '2',
@@ -53,6 +61,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -64,6 +73,8 @@ export const JobInformation = [
   },
   {
     id: '4',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'React Developer',
     location: 'Mumbai',
     vancancy: '2',
@@ -74,6 +85,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -85,6 +97,8 @@ export const JobInformation = [
   },
   {
     id: '5',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'Angular Developer',
     location: 'Mumbai',
     vancancy: '2',
@@ -95,6 +109,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -106,6 +121,8 @@ export const JobInformation = [
   },
   {
     id: '6',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'JavaScript Developer',
     location: 'Luckhnow',
     vancancy: '2',
@@ -116,6 +133,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -127,6 +145,8 @@ export const JobInformation = [
   },
   {
     id: '7',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'Java Developer',
     location: 'Mumbai',
     vancancy: '1',
@@ -137,6 +157,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -148,6 +169,8 @@ export const JobInformation = [
   },
   {
     id: '8',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'Full Stack Developer',
     location: 'Jaipur',
     vancancy: '1',
@@ -158,6 +181,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -169,6 +193,8 @@ export const JobInformation = [
   },
   {
     id: '9',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: '.Net Developer',
     location: 'Banglore',
     vancancy: '2',
@@ -179,6 +205,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -190,6 +217,8 @@ export const JobInformation = [
   },
   {
     id: '10',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'React Developer',
     location: 'Pune',
     vancancy: '2',
@@ -200,6 +229,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',
@@ -211,6 +241,8 @@ export const JobInformation = [
   },
   {
     id: '11',
+    employerDetails:
+      'is a fast-growing company that relies on emerging technology talent, and we want to give you your first start. BestTech provides all its entry-level software developers with a paid training program to ensure you’ll learn the skills you need to succeed. We offer a flexible schedule and the opportunity to work with some of the industry’s best software developers, either in our Salt Lake City office or remotely across the world. With our wide range of Fortune 500 enterprises as clients, you’ll be working on projects that matter as a part of the BestTech team.',
     title: 'PHP Developer',
     location: 'Pune',
     vancancy: '2',
@@ -221,6 +253,7 @@ export const JobInformation = [
     elligibiltyCriteria: {
       title: 'Bachelor of Technology/Engineering',
       nationality: 'Indian',
+      gender: 'Any',
     },
     industryType: 'IT-Software Services',
     functionalArea: 'IT-Softwre',

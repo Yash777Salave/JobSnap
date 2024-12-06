@@ -60,6 +60,8 @@ const JobCard = ({JobInformation}) => {
                 jobDescription: item.jobDescription,
                 postedOn: item.postedOn,
                 vancancy: item.vancancy,
+                gender: item.gender,
+                employerDetails:item.employerDetails
               });
             }}>
             <View style={{margin: 10}}>
