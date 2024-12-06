@@ -11,10 +11,13 @@ import {
 import React, {useState} from 'react';
 import Colors from '../styles/Colors';
 import SavedJobs from '../screens/SavedJobs';
+import {useNavigation} from '@react-navigation/native';
 
 const JobCard = ({JobInformation}) => {
   const [isClicked, setIsClicked] = useState(false);
   const [isId, setIsId] = useState();
+
+  const navigation = useNavigation();
 
   const [savedCards, setSavedCards] = useState([]);
 
@@ -37,7 +40,28 @@ const JobCard = ({JobInformation}) => {
     <View style={styles.CardMainContainer}>
       <View>
         {JobInformation.map(item => (
-          <View style={styles.CardContainer} key={item.id}>
+          <TouchableOpacity
+            style={styles.CardContainer}
+            key={item.id}
+            onPress={() => {
+              navigation.navigate('JobDetailPage', {
+                id: item.id,
+                title: item.title,
+                location: item.location,
+                companyName: item.companyName,
+                companyLogo: item.companyLogo,
+                experienceDetails: item.experienceDetails,
+                salary: item.salary,
+                KeySkills: item.KeySkills,
+                elligibiltyCriteria: item.elligibiltyCriteria,
+                employmentType: item.employmenrType,
+                industryType: item.industryType,
+                functionalArea: item.functionalArea,
+                jobDescription: item.jobDescription,
+                postedOn: item.postedOn,
+                vancancy: item.vancancy,
+              });
+            }}>
             <View style={{margin: 10}}>
               <View style={styles.TitleAndLogoContainer}>
                 <Text style={styles.TitleTXT}>{item.title}</Text>
@@ -76,7 +100,7 @@ const JobCard = ({JobInformation}) => {
                 </TouchableWithoutFeedback>
               </View>
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
         {/* <SavedJobs savedJobs={savedCards || []} allJobs={JobInformation} /> */}
       </View>
