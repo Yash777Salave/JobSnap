@@ -26,7 +26,7 @@ export const JobInformation = [
     location: 'Bhuwneshwar',
     vancancy: '2',
     companyName: 'Harness Digitech.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo2.png'),
     jobDescription:
       'We are looking for a great Wordpress developer who is proficient with Wordpress. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -47,7 +47,7 @@ export const JobInformation = [
     location: 'Mumbai',
     vancancy: '2',
     companyName: 'MadeEasy Softwares.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo3.png'),
     jobDescription:
       'We are looking for a great Laravel developer who is proficient with Laravel. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -68,7 +68,7 @@ export const JobInformation = [
     location: 'Mumbai',
     vancancy: '2',
     companyName: 'ClickKart Pvt Ltd.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo4.png'),
     jobDescription:
       'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -89,7 +89,7 @@ export const JobInformation = [
     location: 'Mumbai',
     vancancy: '2',
     companyName: 'Elexi Software solutions',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo5.jpg'),
     jobDescription:
       'We are looking for a great Angular developer who is proficient with Angular. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -110,7 +110,7 @@ export const JobInformation = [
     location: 'Luckhnow',
     vancancy: '2',
     companyName: 'Purnima Pvt Ltd.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo6.png'),
     jobDescription:
       'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -131,7 +131,7 @@ export const JobInformation = [
     location: 'Mumbai',
     vancancy: '1',
     companyName: 'Apex Techno.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo7.png'),
     jobDescription:
       'We are looking for a great Java developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -152,7 +152,7 @@ export const JobInformation = [
     location: 'Jaipur',
     vancancy: '1',
     companyName: 'Netparam Pvt Ltd.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo8.jpg'),
     jobDescription:
       'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -173,7 +173,7 @@ export const JobInformation = [
     location: 'Banglore',
     vancancy: '2',
     companyName: 'Gurukul Softwares.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo14.png'),
     jobDescription:
       'We are looking for a great Angular developer who is proficient with .Net . Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -194,7 +194,7 @@ export const JobInformation = [
     location: 'Pune',
     vancancy: '2',
     companyName: 'Kongo Techno Pvt Ltd.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo15.png'),
     jobDescription:
       'We are looking for a great JavaScript developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
@@ -215,7 +215,7 @@ export const JobInformation = [
     location: 'Pune',
     vancancy: '2',
     companyName: 'Sudoku Pvt Ltd.',
-    companyLogo: require('../assets/CompanyLogo/CompanyLogo1.webp'),
+    companyLogo: require('../assets/CompanyLogo/CompanyLogo12.png'),
     jobDescription:
       'We are looking for a great PHP developer who is proficient with React.js. Your primary focus will be on developing user interface components and implementing them following well-known React.js workflows (such as Flux or Redux). You will ensure that these components and the overall application are robust and easy to maintain. You will coordinate with the rest of the team working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and quality product is important.',
     elligibiltyCriteria: {
