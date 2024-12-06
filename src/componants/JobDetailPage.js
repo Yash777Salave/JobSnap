@@ -60,6 +60,32 @@ const JobDetailPage = ({route}) => {
             </TouchableHighlight>
           </View>
         </View>
+        <View style={styles.InfoContainerMain}>
+          <View style={styles.BasicInfoContainer}>
+            <View style={styles.ExpContainer}>
+              <Image
+                source={require('../assets/CardIcons/portfolio.png')}
+                style={[styles.Icons, {tintColor: Colors.Grey}]}
+              />
+              <Text style={styles.InfoTXT}>{experienceDetails}</Text>
+            </View>
+            <View style={styles.ExpContainer}>
+              <Image
+                source={require('../assets/CardIcons/location.png')}
+                style={[styles.Icons, {tintColor: Colors.Grey}]}
+              />
+              <Text style={styles.InfoTXT}>{location}</Text>
+            </View>
+            <View style={styles.ExpContainer}>
+              <Image
+                source={require('../assets/wallet.png')}
+                style={[styles.Icons, {tintColor: Colors.Grey}]}
+              />
+              <Text style={styles.InfoTXT}>{salary}</Text>
+            </View>
+            <Text style={styles.PostedOnTXT}>Posted on {postedOn}</Text>
+          </View>
+        </View>
       </View>
     </ScrollView>
   );
@@ -137,5 +163,30 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 17,
     color: '#ffff',
+  },
+  Icons: {
+    height: 22,
+    width: 22,
+    color: Colors.Grey,
+  },
+  BasicInfoContainer: {
+    // borderWidth: 1,
+    margin: 10,
+  },
+  ExpContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 8,
+  },
+  InfoTXT: {
+    fontSize: 17,
+    marginVertical: 2,
+    color: '#696969',
+    // color: Colors.Grey,
+  },
+  PostedOnTXT: {
+    fontSize: 12,
+    color: '#505050',
   },
 });
