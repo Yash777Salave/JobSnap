@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     // margin: 10,
   },
   HeadingValues: {
-    fontSize: 18,
+    fontSize: 17,
     color: '#696969',
   },
   HeadingTXT: {
@@ -308,7 +308,6 @@ const styles = StyleSheet.create({
     marginTop: 17,
   },
   employerDetailsContainer: {
-    // borderWidth: 1,
     margin: 15,
     padding: 12,
     borderRadius: 10,

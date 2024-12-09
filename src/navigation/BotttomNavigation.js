@@ -18,7 +18,7 @@ const BotttomNavigation = () => {
         tabBarShowLabel: false,
 
         tabBarStyle: {
-          height: 60, // Custom height for the tab bar
+          // height: 50, // Custom height for the tab bar
           position: 'absolute',
           // bottom: 16,
           left: 20,
@@ -36,31 +36,34 @@ const BotttomNavigation = () => {
           tabBarIcon: ({focused}) => (
             <View
               style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                top: 10,
+                // alignItems: 'center',
+                // justifyContent: 'center',
+                top: -15,
                 flexDirection: 'row',
-                gap: 5,
+                // gap: 5,
                 backgroundColor: Colors.Primary_Color,
-                width: 80,
-                padding: 6,
-                borderRadius: 10,
+                // width: 60,
+                padding: 10,
+                borderRadius: 100,
+                // borderWidth: 9,
+                borderColor: '#ffff',
+                ...styles.shadow,
               }}>
               <Image
                 source={require('../assets/BottomBarIcons/home.png')}
                 style={{
-                  height: 25,
-                  width: 25,
+                  height: 38,
+                  width: 38,
                   tintColor: focused ? Colors.lightBlue : '#ffff',
                 }}
               />
-              <Text
+              {/* <Text
                 style={{
                   color: focused ? Colors.lightBlue : '#ffff',
                   fontSize: 12,
                 }}>
                 Home
-              </Text>
+              </Text> */}
             </View>
           ),
         }}
@@ -75,7 +78,7 @@ const BotttomNavigation = () => {
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                top: 10,
+                // top: 10,
                 // borderWidth: 1,
                 width: 50,
               }}>
@@ -104,7 +107,11 @@ const BotttomNavigation = () => {
         options={{
           tabBarIcon: ({focused}) => (
             <View
-              style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                // top: 10
+              }}>
               <Image
                 source={require('../assets/BottomBarIcons/user.png')}
                 style={{

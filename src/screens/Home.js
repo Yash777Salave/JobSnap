@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import React from 'react';
@@ -11,7 +12,9 @@ import Colors from '../styles/Colors';
 import HeadingComponant from '../componants/HeadingComponant';
 import JobCard from '../componants/JobCard';
 import {JobInformation} from '../componants/ProgrammingJobs';
+import {useNavigation} from '@react-navigation/native';
 const Home = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView
       style={styles.MainContainer}
@@ -39,7 +42,11 @@ const Home = () => {
           <Text style={styles.QuickLinkHeadingTXT}>Quick links for you</Text>
         </View>
         <View style={styles.LinksCardsContainer}>
-          <View style={styles.EmployerCardContainer}>
+          <TouchableOpacity
+            style={styles.EmployerCardContainer}
+            onPress={() => {
+              navigation.navigate('EmployerInvites');
+            }}>
             <View style={styles.IconsContainer}>
               <Image
                 source={require('../assets/comment.png')}
@@ -49,9 +56,13 @@ const Home = () => {
 
             <Text style={styles.IconTXT}>Employer</Text>
             <Text style={styles.IconChildTXT}>invites</Text>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.EmployerCardContainer}>
+          <TouchableOpacity
+            style={styles.EmployerCardContainer}
+            onPress={() => {
+              navigation.navigate('ApplyStatus');
+            }}>
             <View style={styles.IconsContainer}>
               <Image
                 source={require('../assets/send.png')}
@@ -60,9 +71,13 @@ const Home = () => {
             </View>
             <Text style={styles.IconTXT}>Apply</Text>
             <Text style={styles.IconChildTXT}>status</Text>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.EmployerCardContainer}>
+          <TouchableOpacity
+            style={styles.EmployerCardContainer}
+            onPress={() => {
+              navigation.navigate('SavedJobs');
+            }}>
             <View style={styles.IconsContainer}>
               <Image
                 source={require('../assets/bookmark.png')}
@@ -71,12 +86,14 @@ const Home = () => {
             </View>
             <Text style={styles.IconTXT}>Saved</Text>
             <Text style={styles.IconChildTXT}>jobs</Text>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.QuickLinkHeadingComponant}>
           <Text style={styles.QuickLinkHeadingTXT}>Jobs based on</Text>
         </View>
-        <JobCard JobInformation={JobInformation} />
+        <View style={{marginBottom: 50}}>
+          <JobCard JobInformation={JobInformation} />
+        </View>
       </View>
     </ScrollView>
   );

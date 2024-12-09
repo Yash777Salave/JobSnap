@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import Colors from '../styles/Colors';
-import SavedJobs from '../screens/SavedJobs';
+import SavedJobs from '../screens/SavedJobsss';
 import {useNavigation} from '@react-navigation/native';
 
 const JobCard = ({JobInformation}) => {
