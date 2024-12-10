@@ -38,22 +38,23 @@ const BotttomNavigation = () => {
               style={{
                 // alignItems: 'center',
                 // justifyContent: 'center',
-                top: -15,
+                top: -10,
                 flexDirection: 'row',
                 // gap: 5,
                 backgroundColor: Colors.Primary_Color,
                 // width: 60,
                 padding: 10,
                 borderRadius: 100,
-                // borderWidth: 9,
+                borderWidth: 5,
                 borderColor: '#ffff',
-                ...styles.shadow,
+                // ...styles.shadow,
+                // borderColor: Colors.lightBlue,
               }}>
               <Image
                 source={require('../assets/BottomBarIcons/home.png')}
                 style={{
-                  height: 38,
-                  width: 38,
+                  height: 32,
+                  width: 32,
                   tintColor: focused ? Colors.lightBlue : '#ffff',
                 }}
               />
@@ -139,13 +140,13 @@ export default BotttomNavigation;
 
 const styles = StyleSheet.create({
   shadow: {
-    shadowColor: 'black',
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 10,
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
-    elevation: 5,
+    elevation: 15,
   },
 });

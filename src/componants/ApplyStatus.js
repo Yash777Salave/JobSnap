@@ -7,7 +7,7 @@ const ApplyStatus = () => {
     <View style={styles.MainContainer}>
       <View style={styles.HeadingContainer}>
         <HeadingComponant icon={require('../assets/left.png')} />
-        <Text style={styles.HeadingTXT}>Employer invites</Text>
+        <Text style={styles.HeadingTXT}>Apply status</Text>
       </View>
       <View style={styles.EmptyBoxIconContainer}>
         <Image
