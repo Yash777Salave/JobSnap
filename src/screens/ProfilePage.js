@@ -12,3 +12,41 @@ const ProfilePage = () => {
 export default ProfilePage;
 
 const styles = StyleSheet.create({});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
