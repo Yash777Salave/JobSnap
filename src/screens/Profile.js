@@ -165,22 +165,69 @@ const Profile = () => {
               <View>
                 <Text style={styles.HeadlineTXT}>Employment Details</Text>
               </View>
-              <View style={styles.EditIconContainer}>
+            </View>
+            <View style={styles.employNameContainer}>
+              <View style={styles.expIconContainer}>
                 <Image
-                  source={require('../assets/edit.png')}
+                  source={require('../assets/CardIcons/portfolio.png')}
                   style={styles.EditIcon}
                 />
               </View>
-            </View>
-            <Text style={styles.jobProfile}>{item.jobProfile}</Text>
-            <Text style={styles.HeadlineValueTXT}>{item.currentCompany}</Text>
-            <Text style={styles.HeadlineValueTXT}>{item.startDate}</Text>
-            <Text style={styles.HeadlineValueTXT}>{item.endDate}</Text>
 
-            <Text style={styles.HeadlineValueTXT}>{item.jobProfile2}</Text>
-            <Text style={styles.HeadlineValueTXT}>{item.currentCompany2}</Text>
-            <Text style={styles.HeadlineValueTXT}>{item.startDate2}</Text>
-            <Text style={styles.HeadlineValueTXT}>{item.endDate2}</Text>
+              <View style={styles.jobProfileContainer}>
+                <View>
+                  <Text style={styles.jobProfile}>{item.jobProfile}</Text>
+                </View>
+                <View style={styles.EditIconContainer}>
+                  <Image
+                    source={require('../assets/edit.png')}
+                    style={styles.EditIcon}
+                  />
+                </View>
+              </View>
+            </View>
+            <View>
+              <Text style={styles.currentCompanyTXT}>
+                {item.currentCompany}
+              </Text>
+              <Text style={styles.currentCompanyTXT}>
+                {item.startDate}-{item.endDate}
+              </Text>
+            </View>
+
+            <View style={styles.SecondJobContainer}>
+              <View style={styles.employNameContainer}>
+                <View style={styles.expIconContainer}>
+                  <Image
+                    source={require('../assets/CardIcons/portfolio.png')}
+                    style={[styles.EditIcon,{tintColor:'#51C1A9'}]}
+                  />
+                </View>
+
+                <View style={styles.jobProfileContainer}>
+                  <View>
+                    <Text style={styles.HeadlineValueTXT}>
+                      {item.jobProfile2}
+                    </Text>
+                  </View>
+                  <View style={styles.EditIconContainer}>
+                    <Image
+                      source={require('../assets/edit.png')}
+                      style={styles.EditIcon}
+                    />
+                  </View>
+                </View>
+              </View>
+              <View>
+                <Text style={styles.currentCompanyTXT}>
+                  {item.currentCompany2}
+                </Text>
+
+                <Text style={styles.currentCompanyTXT}>
+                  {item.startDate2}-{item.endDate2}
+                </Text>
+              </View>
+            </View>
           </View>
         ))}
       </View>
@@ -316,6 +363,40 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   jobProfile: {
-    fontSize: 18,
+    fontSize: 19,
+    color: '#414a4c',
+  },
+  employNameContainer: {
+    flexDirection: 'row',
+    // width: '100%',
+    // backgroundColor: 'red',
+    alignItems: 'center',
+    gap: 8,
+    padding: 10,
+    marginTop: 12,
+  },
+  currentCompanyTXT: {
+    fontSize: 16,
+    color: Colors.Grey,
+    paddingHorizontal: 50,
+    bottom: 8,
+  },
+  expIconContainer: {
+    backgroundColor: '#E6FFFA',
+    padding: 6,
+    borderRadius: 100,
+  },
+  jobProfileContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '89%',
+  },
+  SecondJobContainer: {
+    borderTopWidth: 0.4,
+    borderTopEndRadius: 22,
+    borderTopStartRadius: 22,
+    marginBottom: 10,
+    marginTop: 20,
   },
 });
