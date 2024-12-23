@@ -1,7 +1,7 @@
 export const user = [
   {
     name: 'Yash Salave',
-    id:'1',
+    id: '1',
     employerTitle: 'Software Developer at Netparam Technologies',
     currentLocation: 'Pune',
     nationality: 'India',
@@ -27,10 +27,10 @@ export const user = [
     MaritialStatus: 'Single',
     currentCity: 'India',
     Country: 'India',
-    languageKnown: 'Marathi,Hindi,English',
+    languageKnown: '  Marathi, Hindi, English',
     desiredJobs: {
       preferredDesignation: 'Software Engineer,React Native Developer',
-      preferredLocation: 'Pune,Jaipur,Mumbai',
+      preferredLocation: ' Pune, Jaipur, Mumbai',
       preferredIndustry: 'IT-Software Services',
     },
   },

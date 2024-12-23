@@ -1,9 +1,17 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import Colors from '../styles/Colors';
 import {ProgressBar} from 'react-native-paper';
 import {user} from '../componants/User';
 import {employmentDetails} from '../componants/EmployementDetails';
+import {educationalDetails} from '../componants/EducationalDetails';
 const Profile = () => {
   return (
     <ScrollView style={styles.MainContainer}>
@@ -137,28 +145,52 @@ const Profile = () => {
                 />
               </View>
             </View>
-            <Text style={styles.HeadlineValueTXT}>
-              {item.professionalDetails.experience}
-            </Text>
-            <Text style={styles.HeadlineValueTXT}>
-              {item.professionalDetails.industry}
-            </Text>
-            <Text style={styles.HeadlineValueTXT}>
-              {item.professionalDetails.functionalArea}
-            </Text>
-            <Text style={styles.HeadlineValueTXT}>
-              {item.professionalDetails.currentWorkLevel}
-            </Text>
-            <Text style={styles.HeadlineValueTXT}>
-              {item.professionalDetails.monthlySalary}
-            </Text>
-            <Text style={styles.HeadlineValueTXT}>
-              {item.professionalDetails.availableJoin}
-            </Text>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Total Work Experience</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.experience}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Industry</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.industry}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Functional Area</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.functionalArea}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Current Work Level</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.currentWorkLevel}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Monthly Salary</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.monthlySalary}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Availability to join</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.availableJoin}
+              </Text>
+            </View>
           </View>
         ))}
       </View>
-      <View style={{alignItems: 'center', marginBottom: 50}}>
+      <View style={{alignItems: 'center'}}>
         {employmentDetails.map(item => (
           <View key={item.id} style={styles.CvHeadlineContainer}>
             <View style={styles.HeadlineTXTContainer}>
@@ -170,7 +202,7 @@ const Profile = () => {
               <View style={styles.expIconContainer}>
                 <Image
                   source={require('../assets/CardIcons/portfolio.png')}
-                  style={styles.EditIcon}
+                  style={[styles.EditIcon, {tintColor: '#51C1A9'}]}
                 />
               </View>
 
@@ -200,15 +232,13 @@ const Profile = () => {
                 <View style={styles.expIconContainer}>
                   <Image
                     source={require('../assets/CardIcons/portfolio.png')}
-                    style={[styles.EditIcon,{tintColor:'#51C1A9'}]}
+                    style={[styles.EditIcon, {tintColor: '#51C1A9'}]}
                   />
                 </View>
 
                 <View style={styles.jobProfileContainer}>
                   <View>
-                    <Text style={styles.HeadlineValueTXT}>
-                      {item.jobProfile2}
-                    </Text>
+                    <Text style={styles.jobProfile}>{item.jobProfile2}</Text>
                   </View>
                   <View style={styles.EditIconContainer}>
                     <Image
@@ -227,6 +257,213 @@ const Profile = () => {
                   {item.startDate2}-{item.endDate2}
                 </Text>
               </View>
+            </View>
+            <View style={styles.AddExpMainContainer}>
+              <TouchableOpacity style={styles.AddExpContainer}>
+                <Text style={styles.AddExpTXT}>Add Experience</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        ))}
+      </View>
+
+      <View style={{alignItems: 'center'}}>
+        {educationalDetails.map(item => (
+          <View key={item.id} style={styles.CvHeadlineContainer}>
+            <View style={styles.HeadlineTXTContainer}>
+              <View>
+                <Text style={styles.HeadlineTXT}>Educational Details</Text>
+              </View>
+            </View>
+            <View style={styles.employNameContainer}>
+              <View
+                style={[styles.expIconContainer, {backgroundColor: '#ffc9c9'}]}>
+                <Image
+                  source={require('../assets/CardIcons/edu2.png')}
+                  style={[styles.EditIcon]}
+                />
+              </View>
+
+              <View style={styles.jobProfileContainer}>
+                <View>
+                  <Text style={styles.jobProfile}>
+                    {item.highestGraduation}
+                  </Text>
+                </View>
+                <View style={styles.EditIconContainer}>
+                  <Image
+                    source={require('../assets/edit.png')}
+                    style={styles.EditIcon}
+                  />
+                </View>
+              </View>
+            </View>
+            <View>
+              <Text style={styles.currentCompanyTXT}>{item.Institute}</Text>
+            </View>
+            <View>
+              <Text style={styles.dates}>
+                {item.startDate}-{item.endDate}
+              </Text>
+            </View>
+
+            <View style={styles.SecondJobContainer}>
+              <View style={styles.employNameContainer}>
+                <View
+                  style={[
+                    styles.expIconContainer,
+                    {backgroundColor: '#ffc9c9'},
+                  ]}>
+                  <Image
+                    source={require('../assets/CardIcons/edu2.png')}
+                    style={[styles.EditIcon]}
+                  />
+                </View>
+
+                <View style={styles.jobProfileContainer}>
+                  <View>
+                    <Text style={styles.jobProfile}>
+                      {item.highestGraduation2}
+                    </Text>
+                  </View>
+                  <View style={styles.EditIconContainer}>
+                    <Image
+                      source={require('../assets/edit.png')}
+                      style={styles.EditIcon}
+                    />
+                  </View>
+                </View>
+              </View>
+              <View>
+                <Text style={styles.currentCompanyTXT}>{item.Institute2}</Text>
+
+                {/* <Text style={styles.currentCompanyTXT}>{item.course2}</Text> */}
+              </View>
+              <View>
+                <Text style={styles.dates}>
+                  {item.startDate2}-{item.endDate2}
+                </Text>
+              </View>
+            </View>
+            <View style={styles.AddExpMainContainer}>
+              <TouchableOpacity style={styles.AddExpContainer}>
+                <Text style={styles.AddExpTXT}>Add Experience</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        ))}
+      </View>
+      <View style={{alignItems: 'center'}}>
+        {user.map(item => (
+          <View key={item.id} style={styles.CvHeadlineContainer}>
+            <View style={styles.HeadlineTXTContainer}>
+              <View>
+                <Text style={styles.HeadlineTXT}>Profile Summary</Text>
+              </View>
+              <View style={styles.EditIconContainer}>
+                <Image
+                  source={require('../assets/edit.png')}
+                  style={styles.EditIcon}
+                />
+              </View>
+            </View>
+            <Text style={styles.profileSummaryTXT}>{item.profileSummary}</Text>
+          </View>
+        ))}
+      </View>
+
+      <View style={{alignItems: 'center'}}>
+        {user.map(item => (
+          <View key={item.id} style={styles.CvHeadlineContainer}>
+            <View style={styles.HeadlineTXTContainer}>
+              <View>
+                <Text style={styles.HeadlineTXT}>Personal Details</Text>
+              </View>
+              <View style={styles.EditIconContainer}>
+                <Image
+                  source={require('../assets/edit.png')}
+                  style={styles.EditIcon}
+                />
+              </View>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Date of Birth</Text>
+              <Text style={styles.tagValueTXT}>{item.DOB}</Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Gender</Text>
+              <Text style={styles.tagValueTXT}>{item.Gender}</Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Nationality</Text>
+              <Text style={styles.tagValueTXT}>{item.Nationality}</Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Current Work Level</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.professionalDetails.currentWorkLevel}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Religion</Text>
+              <Text style={styles.tagValueTXT}>{item.Religion}</Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Marital Status</Text>
+              <Text style={styles.tagValueTXT}>{item.MaritialStatus}</Text>
+            </View>
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Current City</Text>
+              <Text style={styles.tagValueTXT}>{item.currentCity}</Text>
+            </View>
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Languages Known</Text>
+              <Text style={styles.tagValueTXT}>{item.languageKnown}</Text>
+            </View>
+          </View>
+        ))}
+      </View>
+
+      <View style={{alignItems: 'center', marginBottom: 50}}>
+        {user.map(item => (
+          <View key={item.id} style={styles.CvHeadlineContainer}>
+            <View style={styles.HeadlineTXTContainer}>
+              <View>
+                <Text style={styles.HeadlineTXT}>Desired Jobs</Text>
+              </View>
+              <View style={styles.EditIconContainer}>
+                <Image
+                  source={require('../assets/edit.png')}
+                  style={styles.EditIcon}
+                />
+              </View>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Preferred Designations</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.desiredJobs.preferredDesignation}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Preferred Location</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.desiredJobs.preferredLocation}
+              </Text>
+            </View>
+
+            <View style={styles.tagContainerTXT}>
+              <Text style={styles.tagTXT}>Preferred Industry</Text>
+              <Text style={styles.tagValueTXT}>
+                {item.desiredJobs.preferredIndustry}
+              </Text>
             </View>
           </View>
         ))}
@@ -398,5 +635,46 @@ const styles = StyleSheet.create({
     borderTopStartRadius: 22,
     marginBottom: 10,
     marginTop: 20,
+  },
+  tagTXT: {
+    fontSize: 17,
+    color: Colors.Grey,
+  },
+  tagValueTXT: {
+    fontSize: 17,
+    color: '#414a4c',
+  },
+  tagContainerTXT: {
+    margin: 8,
+    marginTop: 10,
+  },
+  AddExpContainer: {
+    // borderWidth: 1,
+    width: '45%',
+    alignSelf: 'flex-end',
+    marginTop: 8,
+  },
+  AddExpTXT: {
+    fontSize: 17,
+    color: Colors.Primary_Color,
+    textAlign: 'center',
+    margin: 10,
+  },
+  AddExpMainContainer: {
+    borderTopWidth: 0.4,
+    borderTopEndRadius: 22,
+    borderTopStartRadius: 22,
+  },
+  dates: {
+    fontSize: 12,
+    color: Colors.Grey,
+    paddingHorizontal: 50,
+    bottom: 8,
+  },
+  profileSummaryTXT: {
+    fontSize: 16,
+    color: Colors.Grey,
+    marginTop: 6,
+    lineHeight: 20,
   },
 });

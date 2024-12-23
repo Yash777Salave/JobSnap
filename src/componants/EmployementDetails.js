@@ -11,10 +11,5 @@ export const employmentDetails = [
     endDate2: 'November,2024',
     jobProfile2: 'Trainee Full Stack Developer',
   },
-  //   {
-  //     currentCompany: 'CIMET',
-  //     startDate: 'September,2024',
-  //     endDate: 'November,2024',
-  //     jobProfile: 'Software Developer',
-  //   },
+
 ];
