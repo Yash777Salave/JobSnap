@@ -5,6 +5,7 @@ import Colors from '../styles/Colors';
 
 const DocumentPickerr = () => {
   const [resumeName, setResumeName] = useState();
+  const [isClicked, setIsClicked] = useState(false);
   const selectDoc = async () => {
     try {
       const doc = await DocumentPicker.pick({
@@ -12,6 +13,7 @@ const DocumentPickerr = () => {
       });
       const fileName = doc[0].name;
       setResumeName(fileName);
+      setIsClicked(true);
       console.log('Name of the file is', fileName);
     } catch (error) {
       if (DocumentPicker.isCancel(error)) {
@@ -26,20 +28,27 @@ const DocumentPickerr = () => {
       <View style={styles.CvHeadlineContainer}>
         <View>
           <Text style={styles.HeadlineTXT}>Upload CV</Text>
-          <Text style={styles.tagTXT}>
-            Employers prefer profile with original CV attachment
-          </Text>
+          {isClicked === false && (
+            <Text style={styles.tagTXT}>
+              Employers prefer profile with original CV attachment
+            </Text>
+          )}
         </View>
-        <View style={styles.ResumeContainer}>
-          <Image
-            source={require('../assets/resume.png')}
-            style={styles.EditIcon}
-          />
-          <Text style={styles.ResumeName}>{resumeName}</Text>
-        </View>
+        {isClicked && (
+          <View style={styles.ResumeContainer}>
+            <Text style={styles.CrossIcon}>X</Text>
+            <Image
+              source={require('../assets/resume.png')}
+              style={styles.EditIcon}
+              tintColor={'#808080'}
+            />
+            <Text style={styles.ResumeName}>{resumeName}</Text>
+          </View>
+        )}
+
         <View style={styles.AddExpMainContainer}>
           <TouchableOpacity style={styles.AddExpContainer} onPress={selectDoc}>
-            <Text style={styles.AddExpTXT}>Add </Text>
+            <Text style={styles.AddExpTXT}>Upload </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -96,13 +105,17 @@ const styles = StyleSheet.create({
   },
   ResumeContainer: {
     // borderWidth: 2,
-    width: '70%',
+    width: '60%',
     borderRadius: 10,
     backgroundColor: Colors.lightBlue,
     padding: 4,
+    marginBottom: 10,
   },
   ResumeName: {
     fontSize: 13,
     paddingHorizontal: 10,
   },
+  CrossIcon:{
+    
+  }
 });
