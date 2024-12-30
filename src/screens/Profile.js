@@ -12,6 +12,8 @@ import {ProgressBar} from 'react-native-paper';
 import {user} from '../componants/User';
 import {employmentDetails} from '../componants/EmployementDetails';
 import {educationalDetails} from '../componants/EducationalDetails';
+import DocumentPicker from '../componants/DocumentPicker';
+import DocumentPickerr from '../componants/DocumentPicker';
 const Profile = () => {
   return (
     <ScrollView style={styles.MainContainer}>
@@ -430,7 +432,7 @@ const Profile = () => {
         ))}
       </View>
 
-      <View style={{alignItems: 'center', marginBottom: 50}}>
+      <View style={{alignItems: 'center'}}>
         {user.map(item => (
           <View key={item.id} style={styles.CvHeadlineContainer}>
             <View style={styles.HeadlineTXTContainer}>
@@ -467,6 +469,9 @@ const Profile = () => {
             </View>
           </View>
         ))}
+      </View>
+      <View style={{ marginBottom: 50}}>
+        <DocumentPickerr />
       </View>
     </ScrollView>
   );

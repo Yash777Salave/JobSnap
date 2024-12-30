@@ -27,7 +27,7 @@ export const user = [
     MaritialStatus: 'Single',
     currentCity: 'India',
     Country: 'India',
-    languageKnown: '  Marathi, Hindi, English',
+    languageKnown: 'Marathi, Hindi, English',
     desiredJobs: {
       preferredDesignation: 'Software Engineer,React Native Developer',
       preferredLocation: ' Pune, Jaipur, Mumbai',
