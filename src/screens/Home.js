@@ -31,12 +31,16 @@ const Home = () => {
               style={styles.SearchBar}
             />
           </View>
-          <View style={styles.ProfileContainer}>
+          <TouchableOpacity
+            style={styles.ProfileContainer}
+            onPress={() => {
+              navigation.navigate('Profile');
+            }}>
             <Image
-              source={require('../assets/CompanyLogo/CompanyLogo1.webp')}
-              style={styles.ProfileLogo}
+              source={require('../assets/yashDiwali.jpg')}
+              style={styles.ProfileImage}
             />
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.QuickLinkHeadingComponant}>
           <Text style={styles.QuickLinkHeadingTXT}>Quick links for you</Text>
@@ -204,5 +208,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
     color: Colors.Grey,
+  },
+  ProfileImage: {
+    height: 50,
+    width: 50,
+    // borderWidth: 2,
+    borderRadius: 100,
   },
 });

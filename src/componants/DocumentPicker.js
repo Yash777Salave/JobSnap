@@ -36,12 +36,23 @@ const DocumentPickerr = () => {
         </View>
         {isClicked && (
           <View style={styles.ResumeContainer}>
-            <Text style={styles.CrossIcon}>X</Text>
-            <Image
-              source={require('../assets/resume.png')}
-              style={styles.EditIcon}
-              tintColor={'#808080'}
-            />
+            <View style={styles.IconContainer}>
+              <Image
+                source={require('../assets/resume.png')}
+                style={styles.EditIcon}
+                tintColor={'#808080'}
+              />
+              <TouchableOpacity
+                style={{alignItems: 'flex-end'}}
+                onPress={() => {
+                  setIsClicked(false);
+                }}>
+                <Image
+                  source={require('../assets/delete.png')}
+                  style={styles.DeleteIcon}
+                />
+              </TouchableOpacity>
+            </View>
             <Text style={styles.ResumeName}>{resumeName}</Text>
           </View>
         )}
@@ -115,7 +126,16 @@ const styles = StyleSheet.create({
     fontSize: 13,
     paddingHorizontal: 10,
   },
-  CrossIcon:{
-    
-  }
+  DeleteIcon: {
+    height: 30,
+    width: 30,
+    left: 18,
+    bottom: 15,
+  },
+  IconContainer: {
+    flexDirection: 'row',
+    backgroundColor: '#ffff',
+    justifyContent: 'space-between',
+    borderRadius: 10,
+  },
 });

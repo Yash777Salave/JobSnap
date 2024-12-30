@@ -1,11 +1,17 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {JobInformation} from '../componants/ProgrammingJobs';
+import JobCard from '../componants/JobCard';
+import {teachingJobs} from '../componants/TeachingJobs';
 
 const AllJobs = () => {
   return (
-    <View>
-      <Text>AllJobs</Text>
-    </View>
+    <ScrollView>
+      <View style={{marginBottom: 50}}>
+        <JobCard JobInformation={teachingJobs} />
+        <JobCard JobInformation={JobInformation} />
+      </View>
+    </ScrollView>
   );
 };
 
