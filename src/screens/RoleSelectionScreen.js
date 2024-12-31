@@ -112,7 +112,13 @@
 // export default RoleSelectionScreen;
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {Button, Dialog, Portal, PaperProvider} from 'react-native-paper';
+import {
+  Button,
+  Dialog,
+  Portal,
+  PaperProvider,
+  DefaultTheme,
+} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 import LogoContainer from '../componants/LogoContainer';
 import Colors from '../styles/Colors';
@@ -125,8 +131,17 @@ const RoleSelectionScreen = () => {
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
 
+  const customTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: Colors.Primary_Color, // Customize primary color
+      text: 'red', // Text color
+    },
+  };
+
   return (
-    <PaperProvider>
+    <PaperProvider theme={customTheme}>
       <View style={styles.MainContainer}>
         <View style={styles.AppLogoContainer}>
           <LogoContainer />
