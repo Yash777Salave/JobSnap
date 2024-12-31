@@ -14,6 +14,7 @@ import JobDetailPage from '../componants/JobDetailPage';
 import ApplyStatus from '../componants/ApplyStatus';
 import EmployerInvites from '../componants/EmployerInvites';
 import SavedJobs from '../componants/SavedJobs';
+import AlertBox from '../componants/AlertBox';
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -76,6 +77,11 @@ const StackNavigation = () => {
           component={SavedJobs}
           options={{headerShown: false}}
         />
+        {/* <Stack.Screen
+          name="alertBox"
+          component={AlertBox}
+          // options={{headerShown: false}}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
